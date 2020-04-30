@@ -13,7 +13,9 @@
     "fold": "node ./fold",
     "flatten": "node ./flatten",
     "dataflow": "node ./dataflow",
-    "start": "npm-run-all filter-map-reduce merge combine flatten fold dataflow flattenConcurrently filter-map-fusion"
+    "start": "npm-run-all filter-map-reduce merge combine flatten fold dataflow flattenConcurrently filter-map-fusion",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@reactivex/rxjs": "5.0.x",
@@ -24,9 +26,11 @@
     "lodash": "4.17.x",
     "most": "1.1.x",
     "rx": "4.1.x",
-    "v8-profiler-trigger": "^1.0.0"
+    "v8-profiler-trigger": "^1.0.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "npm-run-all": "^3.1.2"
-  }
+  },
+  "snyk": true
 }
